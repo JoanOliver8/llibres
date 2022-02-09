@@ -11,7 +11,7 @@ punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
 
 stop_words = stopwords.words('spanish') + stopwords.words('french')
 stop_words = set(stop_words)
-input_stream = io.TextIOWrapper(sys.stdin.buffer, encoding='latin1')
+input_stream = io.TextIOWrapper(sys.stdin.buffer, encoding='utf-8')
 for line in input_stream:
   line = line.strip()
   line = re.sub(r'[^\w\s]', '',line)
